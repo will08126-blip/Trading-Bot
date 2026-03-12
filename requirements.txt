@@ -30,7 +30,7 @@ numpy==1.26.3
 scipy==1.11.4
 
 # Technical Analysis
-pandas-ta==0.3.14b0
+pandas-ta>=0.3.14b0
 
 # ML
 scikit-learn==1.4.0
