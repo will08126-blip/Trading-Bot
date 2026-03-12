@@ -27,7 +27,7 @@ numpy>=1.26.3
 scipy>=1.11.4
 
 # Technical Analysis
-pandas-ta>=0.3.14b0
+git+https://github.com/twopirllc/pandas-ta.git@development
 
 # ML
 scikit-learn>=1.4.0
