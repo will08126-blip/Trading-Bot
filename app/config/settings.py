@@ -37,6 +37,8 @@ class Settings(BaseSettings):
 
     # ---- Discord ----
     discord_webhook_url: str = ""
+    discord_bot_token: str = ""
+    discord_guild_id: int = 0  # Set to your server ID for instant slash command registration
 
     # ---- Anthropic ----
     anthropic_api_key: str = ""

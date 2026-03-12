@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Environment
+.env
+*.env
+
+# Logs
+logs/
+*.log
+
+# Data
+data/trading_bot.db
+data/models/
+data/historical/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
