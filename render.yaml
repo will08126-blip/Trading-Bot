@@ -3,9 +3,11 @@ services:
     name: trading-bot-discord
     runtime: python
     pythonVersion: "3.11.9"
-    buildCommand: pip install -r requirements-discord.txt
+    buildCommand: pip install -r requirements.txt
     startCommand: python -m app.main --mode discord-bot
     envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
       - key: DISCORD_BOT_TOKEN
         sync: false
       - key: DISCORD_GUILD_ID
