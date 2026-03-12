@@ -2,6 +2,7 @@ services:
   - type: worker
     name: trading-bot-discord
     runtime: python
+    pythonVersion: "3.11.9"
     buildCommand: pip install -r requirements.txt
     startCommand: python -m app.main --mode discord-bot
     envVars:
