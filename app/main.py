@@ -202,7 +202,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Crypto Trading Bot")
     parser.add_argument(
         "--mode",
-        choices=["paper", "live", "backtest", "retrain", "report-daily", "report-weekly", "api"],
+        choices=["paper", "live", "backtest", "retrain", "report-daily", "report-weekly", "api", "discord-bot"],
         default="paper",
         help="Operating mode",
     )
@@ -227,6 +227,10 @@ def main() -> None:
     elif args.mode in ("report-daily", "report-weekly"):
         report_type = "daily" if args.mode == "report-daily" else "weekly"
         asyncio.run(run_report(report_type))
+
+    elif args.mode == "discord-bot":
+        from app.discord_bot.bot import run_discord_bot
+        asyncio.run(run_discord_bot())
 
     elif args.mode in ("paper", "live"):
         from app.trading_worker import TradingWorker
