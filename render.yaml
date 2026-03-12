@@ -1,0 +1,22 @@
+services:
+  - type: worker
+    name: trading-bot
+    runtime: python
+    pythonVersion: "3.11.9"
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -m app.main --mode paper-with-discord
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: DISCORD_BOT_TOKEN
+        sync: false
+      - key: DISCORD_GUILD_ID
+        sync: false
+      - key: BOT_MODE
+        value: paper
+      - key: DATABASE_URL
+        value: sqlite:///./data/trading_bot.db
+      - key: LOG_LEVEL
+        value: INFO
+      - key: LOG_DIR
+        value: ./logs
